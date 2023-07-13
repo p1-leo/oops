@@ -1,8 +1,8 @@
 -- This rockspec is only used for running tests.
 package = "oops"
-version = "scm-0"
+version = "scm-1"
 source = {
-  url = "git://github.com/blacktaxi/oops.git"
+  url = "git://github.com/p1-leo/oops.git"
 }
 
 dependencies = {
