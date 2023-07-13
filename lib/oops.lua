@@ -90,8 +90,11 @@ local new_class_internal = function (name, parentclass, classdef)
 
     __tostring = function()
       return '<class: ' .. cls.__name .. '>'
-    end
-  })
+    end,
+
+    -- enable acces to all class fields staticaly
+    __index = cls.__classdef
+    })
 end
 
 --- Defines a new class.

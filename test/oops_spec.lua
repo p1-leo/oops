@@ -47,6 +47,12 @@ context('base class functionality', function ()
     assert_equal(o3.__class, C3)
   end)
 
+  test('__index class properties should be accesible staticaly from the class', function ()
+    local C1 = class {prop=true}
+    print(inspect(C1))
+    assert_true(C1.prop)
+  end)
+
   test('__init method should be called', function ()
     local o = 
       (class { __init = function (self) self.field = 42 end })()
