@@ -207,7 +207,7 @@ context('inheritance and dispatch', function ()
     assert_equal(
       unpack({ 1, 2, 3, 4, 5, 4 }),
       unpack(_.map({ C1, C2, C3, C4, C5, C6 },
-        function (i, cls)
+        function (cls, i)
           local o = cls()
           return o:method()
         end))
